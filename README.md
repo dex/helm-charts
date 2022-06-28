@@ -9,14 +9,14 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 
 Once Helm has been set up correctly, add the repo as follows:
 
-  helm repo add freedns https://charts.dex.idv.tw/
+    helm repo add dex https://charts.dex.idv.tw/
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
-the latest versions of the packages.  You can then run `helm search repo <alias>` to see the charts.
+the latest versions of the packages.  You can then run `helm search repo dex` to see the charts.
 
 To install the freedns-updater chart:
 
-    helm install my-freedns-updater freedns/freedns-updater
+    helm install my-freedns-updater dex/freedns-updater
 
 To uninstall the chart:
 

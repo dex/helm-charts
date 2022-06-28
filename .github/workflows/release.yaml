@@ -44,6 +44,6 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         with:
-          charts_repo_url: https://dex.idv.tw/helm-charts
+          charts_repo_url: https://charts.dex.idv.tw
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

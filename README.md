@@ -1,3 +1,7 @@
+# Dex's Helm Charts
+
+[Helm](https://helm.sh) repo for different charts which can be installed on [Kubernetes](https://kubernetes.io)
+
 ## Usage
 
 [Helm](https://helm.sh) must be installed to use the charts.  Please refer to
@@ -8,8 +12,7 @@ Once Helm has been set up correctly, add the repo as follows:
   helm repo add freedns https://dex.idv.tw/helm-charts
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
-the latest versions of the packages.  You can then run `helm search repo
-<alias>` to see the charts.
+the latest versions of the packages.  You can then run `helm search repo <alias>` to see the charts.
 
 To install the freedns-updater chart:
 

@@ -3,6 +3,16 @@ entries:
   freedns-updater:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2022-06-28T17:19:21.622307612Z"
+    description: A Helm chart for FreeDNS dynamic DNS API interface V2
+    digest: 6b9eec5c8c582dccb45e84e60f54a409f687cf3c9d166c6b7e245b5d32bd69e6
+    name: freedns-updater
+    type: application
+    urls:
+    - https://github.com/dex/helm-charts/releases/download/freedns-updater-0.1.1/freedns-updater-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2022-06-28T16:03:51.536210283Z"
     description: A Helm chart for FreeDNS dynamic DNS API interface V2
     digest: 72daf08249f59c47c935a78fd3c252005d3b6534bd0f61874547f59997cf269d
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/dex/helm-charts/releases/download/freedns-updater-0.1.0/freedns-updater-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-28T16:03:51.536216983Z"
+generated: "2022-06-28T17:19:21.622323312Z"

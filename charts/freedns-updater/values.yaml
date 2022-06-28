@@ -8,6 +8,7 @@ image:
   pullPolicy: IfNotPresent
 
 tokens: []
+  # Please go to https://freedns.afraid.org/dynamic/v2/ to get the tokens of your sub-domains
   # - freedns-token1
   # - freedns-token2
   # - freedns-token3

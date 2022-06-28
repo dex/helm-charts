@@ -8,9 +8,9 @@ image:
   pullPolicy: IfNotPresent
 
 tokens: []
-  # - token1
-  # - token2
-  # - token3
+  # - freedns-token1
+  # - freedns-token2
+  # - freedns-token3
 
 cronjob:
   # Every week

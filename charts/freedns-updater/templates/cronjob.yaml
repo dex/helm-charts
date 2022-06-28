@@ -1,0 +1,38 @@
+{{- if .Capabilities.APIVersions.Has "batch/v1/CronJob" }}
+apiVersion: batch/v1
+{{- else }}
+apiVersion: batch/v1beta1
+{{- end }}
+kind: CronJob
+metadata:
+  name: {{ include "freedns-updater.fullname" . }}
+  labels:
+    {{- include "freedns-updater.labels" . | nindent 4 }}
+spec:
+  schedule: "{{ .Values.cronjob.schedule }}"
+  concurrencyPolicy: Forbid
+  {{- with .Values.cronjob.failedJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ . }}
+  {{- end }}
+  {{- with .Values.cronjob.successfulJobsHistoryLimit }}
+  successfulJobsHistoryLimit: {{ . }}
+  {{- end }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              env:
+              - name: FREEDNS_TOKENS
+                valueFrom:
+                  secretKeyRef:
+                    name: {{ include "freedns-updater.fullname" . }}-tokens
+                    key: tokens
+              args:
+                - "https://sync.afraid.org/u/{$(FREEDNS_TOKENS)}/"
+              resources:
+{{ toYaml .Values.resources | indent 16 }}

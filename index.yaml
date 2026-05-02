@@ -21,4 +21,15 @@ entries:
     urls:
     - https://github.com/dex/helm-charts/releases/download/freedns-updater-0.1.0/freedns-updater-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-28T17:19:21.622323312Z"
+  yacreader-server:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-05-02T08:51:46.240067337Z"
+    description: A Helm chart for YACReaderLibraryServer
+    digest: a85b90fcb38c838b02e2be674a6b3c5c1b2e737ef90ce66b1166ed31406adea2
+    name: yacreader-server
+    type: application
+    urls:
+    - https://github.com/dex/helm-charts/releases/download/yacreader-server-0.1.0/yacreader-server-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-05-02T08:51:46.240076915Z"

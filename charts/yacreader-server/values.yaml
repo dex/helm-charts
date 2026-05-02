@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: yacreader/yacreaderlibraryserver
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 9999
+
+persistence:
+  config:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 100Mi
+    mountPath: /config
+  comics:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 1Ti
+    mountPath: /comics
+
+env:
+  PUID: "99"
+  PGID: "100"
+  TZ: "Asia/Taipei"
